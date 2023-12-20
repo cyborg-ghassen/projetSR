@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:8
+    container_name: vehiculesales
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: vehiculesales
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    network_mode: bridge
