@@ -17,6 +17,15 @@ public class UdpServer {
                 System.out.println("Received: " + receivedData);
 
                 // Process data here
+                try {
+                    double processedData = Double.parseDouble(receivedData);
+                    // Continue processing the numeric data
+                    System.out.println("Processed data: " + processedData);
+                } catch (NumberFormatException e) {
+                    // Handle the case where the received data is not a valid double
+                    System.err.println("Error: Received data is not a valid double");
+                    e.printStackTrace();
+                }
 
                 // Optionally send a response back to the client
                 String responseData = "Processed data";
