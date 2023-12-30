@@ -24,7 +24,7 @@ public class VehicleSalesServiceImpl extends UnicastRemoteObject implements Vehi
 
             if (rs.next()) {
                 totalAmount = rs.getDouble("Total");
-                System.out.println("Total amount calculated on the server: " + totalAmount); // Affichage sur le serveur
+                System.out.println("Total amount calculated on the server: " + totalAmount);
             }
 
         } catch (SQLException e) {
